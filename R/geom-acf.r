@@ -73,9 +73,9 @@
 geom_acf <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                     inherit.aes = TRUE, ...) {
     list(
-        stat_ACF(mapping = NULL, data = NULL, geom = "line", na.rm = FALSE, show.legend = NA,
+        stat_ACF(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                  inherit.aes = TRUE, ...),
-        stat_CONF(mapping = NULL, data = NULL, geom = "hline", na.rm = FALSE, show.legend = NA,
+        stat_CONF(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                   inherit.aes = TRUE)
     )
 }
@@ -87,9 +87,9 @@ geom_acf <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = N
 geom_pacf <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                     inherit.aes = TRUE, ...) {
     list(
-        stat_PACF(mapping = NULL, data = NULL, geom = "line", na.rm = FALSE, show.legend = NA,
+        stat_PACF(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                  inherit.aes = TRUE, ...),
-        stat_CONF(mapping = NULL, data = NULL, geom = "hline", na.rm = FALSE, show.legend = NA,
+        stat_CONF(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = NA,
                   inherit.aes = TRUE)
     )
 }
