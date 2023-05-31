@@ -108,7 +108,7 @@ stat_ACF <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = N
                     inherit.aes = TRUE, lag.max = 20, exp = 1, ...) {
 
     layer(
-        stat = statACF, data = data, mapping = aes(x = ..lag.., group = ..lag..), geom = "line",
+        stat = statACF, data = data, mapping = aes(x = after_stat(lag), group = after_stat(lag)), geom = "line",
         position = "identity", show.legend = show.legend, inherit.aes = inherit.aes,
         params = list(na.rm = na.rm, lag.max = lag.max, exp = exp, ...)
     )
@@ -122,7 +122,7 @@ stat_PACF <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = 
                     inherit.aes = TRUE, lag.max = 20, exp = 1, ...) {
 
     layer(
-        stat = statPACF, data = data, mapping = aes(x = ..lag.., group = ..lag..), geom = "line",
+        stat = statPACF, data = data, mapping = aes(x = after_stat(lag), group = after_stat(lag)), geom = "line",
         position = "identity", show.legend = show.legend, inherit.aes = inherit.aes,
         params = list(na.rm = na.rm, lag.max = lag.max, exp = exp, ...)
     )
@@ -136,7 +136,7 @@ stat_CONF <- function(mapping = NULL, data = NULL, na.rm = FALSE, show.legend = 
                     inherit.aes = TRUE, ...) {
 
     layer(
-        stat = statCONF, data = data, mapping = aes(yintercept = ..conf..), geom = "hline",
+        stat = statCONF, data = data, mapping = aes(yintercept = after_stat(conf)), geom = "hline",
         position = "identity", show.legend = show.legend, inherit.aes = FALSE,
         params = list(na.rm = na.rm, color = "blue4", linetype = 2, ...)
     )
